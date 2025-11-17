@@ -4,13 +4,11 @@ title: SDEV1000 Project
 
 Team Members:
 
-1.  *Team member 1*
+1.  *Logan*
 
-2.  *Team member 2*
+2.  *Evan*
 
-3.  *Team member 3*
-
-4.  *Team member 4*
+3.  *Sam*
 
 # 1. Problem Analysis & Decomposition for Entire System {#problem-analysis-decomposition-for-entire-system}
 
