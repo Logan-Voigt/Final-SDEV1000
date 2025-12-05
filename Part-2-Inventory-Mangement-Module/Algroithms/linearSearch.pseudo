@@ -1,0 +1,14 @@
+FUNCTION linearSearch(id, array)
+
+    FOR index = 0 TO length(array) - 1
+
+        IF array[index].id == id THEN
+            RETURN index
+
+        ENDIF
+
+    ENDFOR
+
+    RETURN -1
+
+ENDFUNCTION

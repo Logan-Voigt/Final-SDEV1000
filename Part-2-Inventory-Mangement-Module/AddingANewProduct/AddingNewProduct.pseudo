@@ -1,0 +1,4 @@
+FUNCTION addANewProduct(id, name, category, quantity, price, products)
+
+    products append new product(id, name, category, quantity, price, products)
+

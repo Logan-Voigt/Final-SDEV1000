@@ -1,0 +1,11 @@
+FUNCTION removeExistingProduct(id, products)
+
+    FOR index = 0 TO length(products)
+
+        IF products[index].id == id THEN
+            products.remove(index)
+        ENDIF
+
+    ENDFOR
+
+ENDFUNCTION

@@ -1,0 +1,17 @@
+
+
+FUNCTION updateExistingProduct(id, name, category, quantity, price, discount)
+
+     index = 0 TO length(products)
+
+        IF products[index].id == id THEN
+
+            products.name = name
+            products.category = category
+            products.quantity = quantity
+            products.price = price
+            products.discount = discount
+
+        ENDIF
+
+    ENDFOR

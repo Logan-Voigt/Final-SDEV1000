@@ -1,0 +1,34 @@
+FUNCTION newReceiptItem(name, quantities, totalPrice)
+    DECLARE returnString = ""
+
+    SET returnString = name + " x " + quantities + ": " + totalPrice + "$" NEWLINE
+
+    RETURN returnString
+
+ENDFUNCTION
+
+FUNCTION generateReceipt(shoppingCart)
+
+    DECLARE receiptString = ""
+
+    DECLARE total = 0
+
+    FOR index = 0 TO length(shoppingCart) - 1
+
+        DECLARE current = shoppingCart[index]
+
+        DECLARE discountedPrice = discountCalculation(current.price, current.discount)
+
+        DECLARE totalPrice =  discountedPrice * current.quantities
+
+        SET receiptString += newReceiptItem(current.name, current.quantities, totalPrice)
+
+        SET total += totalPrice
+
+    ENDFOR
+
+    receiptString += "Total: " + total
+
+    RETURN receiptString
+
+ENDFUNCTION

@@ -1,0 +1,2 @@
+FUNCTION discountCalculation(price, discountPercentage)
+    RETURN price - (price * discountPercentage)
