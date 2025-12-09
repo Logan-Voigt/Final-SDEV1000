@@ -1,0 +1,22 @@
+FUNCTION binarySearch(low, high, id, array)
+    IF high >= low THEN
+
+        DECLARE mid = low + (high - low) divide by 2 with no remainder
+
+        IF array[mid].id == id THEN
+            RETURN mid
+
+        ELSE IF array[mid].id > id THEN
+            RETURN binarySearch(low, mid - 1, id, array)
+
+        ELSE
+            RETURN binarySearch(mid + 1, high, id, array
+
+        ENDIF
+
+    ELSE
+        RETURN -1
+
+    ENDIF
+
+ENDFUNCTION

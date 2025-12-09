@@ -1,0 +1,25 @@
+FUNCTION processTransaction(shoppingCart)
+
+    INPUT paymentMethod
+
+    Declare totalAmount
+
+    DECLARE total = 0
+
+    FOR index = 0 TO length(shoppingCart) - 1
+
+        DECLARE current = shoppingCart[index]
+
+        DECLARE discountedPrice = discountCalculation(current.price, current.discount)
+
+        DECLARE totalPrice = discountedPrice * current.quantities
+
+        SET total += totalPrice
+
+    ENDFOR
+
+    charge paymentMethod total, return change IF necessary.
+
+    DECLARE receipt = generateReceipt(shoppingCart)
+
+    OUTPUT receipt

@@ -1,0 +1,17 @@
+FUNCTION bubbleSort(array)
+
+    FOR i = 0 TO length(array) - 1
+
+        FOR j TO length(array) - i - 1
+
+            IF array[j].price > array[j + 1].price THEN
+                DECLARE temp = array[j]
+                SET array[j] = array[j + 1]
+                SET array[j + 1] = temp
+            ENDIF
+
+        ENDFOR
+
+    ENDFOR
+
+ENDFUNCTION
