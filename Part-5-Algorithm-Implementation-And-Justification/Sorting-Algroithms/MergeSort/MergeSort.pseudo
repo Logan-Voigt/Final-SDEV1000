@@ -34,14 +34,14 @@ FUNCTION Merge(left, right)
 
     // add remainers of left
     WHILE leftIndex < length(left)
-        ADD left[i] TO mergedList
+        append left[i] TO mergedList
         SET leftIndex += 1
 
     ENDWHILE
 
     // add remainders of right
     WHILE rightIndex < length(right)
-        ADD right[rightIndex] TO mergedList
+        append right[rightIndex] TO mergedList
         SET rightIndex += 1
 
     ENDWHILE
