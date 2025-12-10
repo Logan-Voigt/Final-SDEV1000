@@ -2,7 +2,7 @@ FUNCTION bubbleSort(array)
 
     FOR i = 0 TO length(array) - 1
 
-        FOR j TO length(array) - i - 1
+        FOR j = 0 TO length(array) - i - 1
 
             IF array[j].price > array[j + 1].price THEN
                 DECLARE temp = array[j]

@@ -10,7 +10,7 @@ FUNCTION binarySearch(low, high, id, array)
             RETURN binarySearch(low, mid - 1, id, array)
 
         ELSE
-            RETURN binarySearch(mid + 1, high, id, array
+            RETURN binarySearch(mid + 1, high, id, array)
 
         ENDIF
 
@@ -20,3 +20,4 @@ FUNCTION binarySearch(low, high, id, array)
     ENDIF
 
 ENDFUNCTION
+

@@ -17,13 +17,13 @@ FUNCTION generateReceipt(shoppingCart)
 
         DECLARE current = shoppingCart[index]
 
-        DECLARE discountedPrice = discountCalculation(current.price, current.discount)
+        DECLARE totalCostOfItem = getItemTotal(current)
 
-        DECLARE totalPrice =  discountedPrice * current.quantities
+        DECLARE priceAfterDiscountApplied = applyDiscount(current, totalCostOfItem)
 
-        SET receiptString += newReceiptItem(current.name, current.quantities, totalPrice)
+        SET receiptString += newReceiptItem(current.name, current.quantities, priceAfterDiscountApplied)
 
-        SET total += totalPrice
+        SET total += priceAfterDiscountApplied
 
     ENDFOR
 
@@ -32,3 +32,4 @@ FUNCTION generateReceipt(shoppingCart)
     RETURN receiptString
 
 ENDFUNCTION
+

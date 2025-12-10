@@ -1,8 +1,6 @@
-
-
 FUNCTION updateExistingProduct(id, name, category, quantity, price, discount)
 
-     index = 0 TO length(products)
+     FOR index = 0 TO length(products) - 1
 
         IF products[index].id == id THEN
 
@@ -15,3 +13,6 @@ FUNCTION updateExistingProduct(id, name, category, quantity, price, discount)
         ENDIF
 
     ENDFOR
+
+ENDFUNCTION
+

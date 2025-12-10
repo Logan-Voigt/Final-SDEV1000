@@ -1,53 +1,53 @@
-FUNCTION merge(array, left, mid, right):
-    DECLARE leftSize = mid - left + 1
-    DECLARE rightSize = right - mid
+FUNCTION MergeSort(myList)
+    IF length(myList) <= 1  // break case if length of list is 1 item end recursion.
+        RETURN myList
 
-    DECLARE leftList = [0] of length leftSize
-    DECLARE rightList = [0] of length rightSize
+    ENDIF
 
-    FOR index=0 TO leftSize:
-        leftList[index] = array[left + index]
-    ENDFOR
+    DECLARE leftHalf = left half of myList
+    DECLARE rightHalf = right half of myList
 
-    FOR index=0 TO rightSize:
-        rightList[index] = array[mid + 1 + index]
-    ENDFOR
+    // merge each half of list
+    SET leftHalf = mergeSort(leftHalf)
+    SET rightHalf = mergeSort(rightHalf)
+    
+    RETURN merge(leftHalf, rightHalf)
 
-    DECLARE i = 0
-    DECLARE j = 0
-    DECLARE k = left
+ENDFUNCTION
 
-    WHILE i < leftSize AND j < rightSize
-        IF leftList[i] <= rightList[j] THEN
-            SET array[k] = L[i]
-            SET i += 1
+FUNCTION Merge(left, right)
+    DECLARE mergedList = []
+    DECLARE leftIndex = 0       
+    DECLARE rightIndex = 0
+
+    WHILE leftIndex < length(left) AND rightIndex < length(right)
+        IF left[leftIndex].price <= right[j].price
+            ADD left[i] to mergedList
+            SET leftIndex += 1
         ELSE
-            SET array[k] = R[j]
-            SET j += 1
+            ADD right[rightIndex] to mergedList
+            SET rightIndex += 1
 
         ENDIF
-        SET k += 1
 
-    WHILE i < leftSize
-        SET array[k] = leftList[i]
-        SET i += 1
-        SET k += 1
     ENDWHILE
 
-    WHILE j < n2
-        SET array[k] = rightList[j]
-        SET j += 1
-        SET k += 1
+    // add remainers of left
+    WHILE leftIndex < length(left)
+        ADD left[i] TO mergedList
+        SET leftIndex += 1
+
+    ENDWHILE
+
+    // add remainders of right
+    WHILE rightIndex < length(right)
+        ADD right[rightIndex] TO mergedList
+        SET rightIndex += 1
+
+    ENDWHILE
+
+    // return the merged list.
+    RETURN mergedList
 
 ENDFUNCTION
 
-
-FUNCTION mergeSort(array, left, right)
-    IF left < right THEN
-        DECLARE  = (left + right) / 2 get rid of remainder
-
-        SET mergeSort(array, left, mid)
-        SET mergeSort(array, mid + 1, right)
-        SET merge(array, left, mid, right)
-
-ENDFUNCTION

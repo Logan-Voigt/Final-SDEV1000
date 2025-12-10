@@ -20,3 +20,4 @@ FUNCTION binarySearch(low, high, id, array)
     ENDIF
 
 ENDFUNCTION
+

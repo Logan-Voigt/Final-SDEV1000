@@ -1,6 +1,6 @@
 FUNCTION removeExistingProduct(id, products)
 
-    FOR index = 0 TO length(products)
+    FOR index = 0 TO length(products) - 1
 
         IF products[index].id == id THEN
             products.remove(index)
@@ -9,3 +9,4 @@ FUNCTION removeExistingProduct(id, products)
     ENDFOR
 
 ENDFUNCTION
+

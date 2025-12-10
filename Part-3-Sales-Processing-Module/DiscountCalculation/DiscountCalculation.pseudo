@@ -1,2 +1,13 @@
-FUNCTION discountCalculation(price, discountPercentage)
-    RETURN price - (price * discountPercentage)
+FUNCTION applyDiscount(currentItem, totalPrice)
+    DECLARE discountPercentage = currentItem.discount
+
+    RETURN totalPrice - (totalPrice * discount)
+
+ENDFUNCTION
+
+
+FUNCTION getItemTotal(currentItem)
+    RETURN currentItem.price * currentItem.quantity
+
+ENDFUNCTION
+

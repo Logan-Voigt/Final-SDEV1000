@@ -12,3 +12,4 @@ FUNCTION linearSearch(id, array)
     RETURN -1
 
 ENDFUNCTION
+
